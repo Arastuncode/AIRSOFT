@@ -1,0 +1,7 @@
+.top-img img {
+    max-height: 90vh;  
+    max-width: 100%; 
+    object-fit: cover;
+    object-position: bottom;
+}
+@media only screen and (min-width: 768px) {}
