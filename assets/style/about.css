@@ -4,4 +4,19 @@
     object-fit: cover;
     object-position: bottom;
 }
-@media only screen and (min-width: 768px) {}
+.col-6{padding: 10px;}
+p, li{color: #fff;font:1.5em 'Roboto', sans-serif;text-align: justify;}
+main i{color: #fff;font:400 5em 'Roboto', sans-serif;}
+h1{color: #fff;font:500 'Roboto', sans-serif; text-align: center;}
+li{margin: 5px 0;}
+.d-flex{display: flex;justify-content: center;flex-direction: column; align-items: center;}
+@media only screen and (min-width: 768px) {
+    .row::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .fleft{float: left}
+    .fright{float: right}
+    .col-6{ width: 50%; }
+}
