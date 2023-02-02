@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 body{background: #1d1c1d;background: linear-gradient(120deg, #1d1c1d 13%, #492c2c 68%, #912e2eea 100%);}
 .bg{
@@ -15,7 +16,7 @@ body{background: #1d1c1d;background: linear-gradient(120deg, #1d1c1d 13%, #492c2
 }
 main .bg{background: #302e2e;background: radial-gradient(circle, #302e2e 24%, #161515 60%);}
 #logo img{width:30%;}
-header li{list-style: none;}
+header, footer li{list-style: none;}
 header a{padding:5px}
 a{color:#fff;text-decoration:none;text-transform: uppercase;font: 1em 'Roboto', sans-serif;}
 h1{font:bold 2em 'Roboto', sans-serif;text-transform: uppercase;} 
@@ -27,15 +28,6 @@ header p{font:1em 'Roboto', sans-serif;text-transform: uppercase;margin: 10px 0;
     background: transparent;
     color: #fff;
     font-size:2em;
-}
-.navbar {display: none;}
-.navbar ul {padding-top: 50%;width: 100%;}
-.navbar li {
-    display: block;
-    margin: 20px 0;
-    padding: 5% 20px;
-    width: 100vw;
-    text-align: center;
 }
 .hamburger {
     margin:0 10%;
@@ -64,27 +56,26 @@ header p{font:1em 'Roboto', sans-serif;text-transform: uppercase;margin: 10px 0;
     to {transform: translateX(0px); opacity: 1;}
 }  
 .hamburger {float: right;}
-.navbar {width: 100%;height: 25vh;display: none;}
+.navbar {width: 100%;display: none;}
 .navbar ul {
     overflow: hidden;
     list-style: none;
-    padding: 3% 30% 3% 3%;
-    margin: 0;
+    margin: 10px;
 }
 .navbar li {
-    display: inline-block;
-    margin: 0;
-    padding: 14px 20px;
+    display: block;
+    margin: auto;
+    width: max-content;
+    padding: 10px;
     transition: background-color .5s;
 }
 .navbar li a {
     color: #d3e3e3;
     text-decoration: none;
     padding: 14px 16px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1em;
     transition: all 1s;
-}
+} 
+.language {display: flex;justify-content:center;align-items: center;}   
 #menu i{margin:0 5px}
 #solider{height: 90vh;position: relative;}
 #solider img{height:70%;position:absolute;left: 0;bottom: 0;}
@@ -180,27 +171,26 @@ h3{text-align: center;}
     .container {max-width: 1180px;margin: auto;}
     .nav{display:inline-flex;justify-content:space-between;align-items: center;}
     #logo img{width:15vw}
-    #menu li{ padding:10px 0;display:inline;}
-    #menu a{border-radius: 25px;padding: 5px 10px;}
+    #menu{padding: 10px;}
+    #menu a{border-radius: 25px;padding: 10px ;}
     #menu a:hover{
-        background: rgb(238,196,196);
-        background: linear-gradient(24deg, #eec4c4 24%, #fb8886 60%);
+        background: #eec4c4;
+        background: linear-gradient(24deg, #edc4c4 24%, #fb8886 60%);
         color: black;
-    }
+    } 
+    #menu ul li{display: inline}
+    #menu li {display: inline;}   
     .hamburger{display:none}
-    .navbar{display:inline;height: 10vh;}
-    #menu{width: 100%;}
-    .navbar {width: 70vw;text-align: end;}
-    .navbar ul {padding:40px 10px;}
-    .navbar li a {font-size: 1.2em;}
+    .navbar{display:inline-flex; justify-content: flex-end; width: 75vw;}
     #solider{position: relative;}
+    .language  a{display: flex;align-items: center;justify-content: center;}
     #solider img{height:77vh;position:absolute;left: 0;bottom: 0;}
     .text{width:70%}
     h1{font-size:3rem;}
     .bg h2::before{
         content: " ";
         display: inline-block;
-        width: 35%;
+        width: 33%;
         height:10px;
         margin: 0 10px;
         background: #fff;
@@ -212,7 +202,7 @@ h3{text-align: center;}
     .bg h2::after{
         content: " ";
         display: inline-block;
-        width: 35%;
+        width: 33%;
         height:10px;
         background: #fff;
         border-radius: 25px;
@@ -222,6 +212,9 @@ h3{text-align: center;}
     } 
     .btn-bg:hover{background:#000;color: #fff;transition: all 2s ease-in-out;}
     .about{width:50%;}
+    footer {display:flex;justify-content:space-around}
+    .contact li{padding: 10px;}
+    .contact li a{padding: 10px;font-size:1.2em;text-transform:lowercase}
 }
 
 @media only screen and (max-width: 362px) {
