@@ -4,13 +4,14 @@
     object-fit: cover;
     object-position: bottom;
 }
-.col-6{padding:10px; height: 40vh; }
-p, main li{color: #fff;font:1.5em 'Roboto', sans-serif;text-align: justify;}
+.col-6{padding:10px; }
+.col-6 img {max-width: 100%;}
+p, main li{color: #fff;font:1.1em 'Roboto', sans-serif;text-align: justify;}
 main i{color: #fff;font:400 5em 'Roboto', sans-serif;}
 h1{color: #fff;font:500 'Roboto', sans-serif; text-align: center;}
 li{margin: 5px 0;}
 .d-flex{display: flex;justify-content: center;flex-direction: column; align-items: center;}
-.about-text{background: #ffffff34; border-radius: 25px;padding: 10px;}
+.about-text{background: #ffffff34; border-radius: 25px;padding: 10px ;}
 @media only screen and (min-width: 768px) {
     .row::after{
         content: "";
@@ -20,4 +21,5 @@ li{margin: 5px 0;}
     .fleft{float: left}
     .fright{float: right}
     .col-6{ width: 50%; }
+    .col-6 img {width: inherit;}
 }

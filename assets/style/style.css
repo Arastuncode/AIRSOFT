@@ -161,12 +161,13 @@ h3{text-align: center;}
     display: inline-block !important;
 }
 .text i {font-size:2em;}
-.map{
+main .map{
     display: flex;
     justify-content:center;
     padding:20px ;
     width: 95%;
 }
+footer .map iframe{width:100%; padding:0 10px}
 @media only screen and (min-width: 768px) {
     .container {max-width: 1180px;margin: auto;}
     .nav{display:inline-flex;justify-content:space-between;align-items: center;}
@@ -215,6 +216,8 @@ h3{text-align: center;}
     footer {display:flex;justify-content:space-around}
     .contact li{padding: 10px;}
     .contact li a{padding: 10px;font-size:1.2em;text-transform:lowercase}
+    footer .map {width:50%;}
+    footer .map iframe{width:100%;}
 }
 
 @media only screen and (max-width: 362px) {
