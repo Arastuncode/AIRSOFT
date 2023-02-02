@@ -20,6 +20,6 @@ li{margin: 5px 0;}
     }
     .fleft{float: left}
     .fright{float: right}
-    .col-6{ width: 50%; }
+    .col-6{ width: 50%;height: 40vh; }
     .col-6 img {width: inherit;}
 }
