@@ -9,71 +9,28 @@ hamburger.addEventListener('click', function() {
 });
 
 //slider
+let slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-$( () => {
-  const slider = $("#slider");
-  const image = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg']
-  let x = 0;
-  let path = './/assets/img/'
-  let n = image.length - 1;
-  slider.css({
-    width: '90%',
-    height: '80vh',
-    margin: '50px auto',
-    position: 'relative',
-    overflow: 'hidden',
-  })
-  .append('<div id="slide"></div><div id="thumbs"></div>')
-  .click( function (e) {change(e.pageX > $("body").width()/ 2 ? 1 : -1 );})
-  const slide = $("#slide");
-  const thumbs = $("#thumbs");
-  slide.css({
-    width: '100%',
-    height: '100%',
-    position : 'absolute',
-    top : 0,
-  })
-  thumbs.css({
-    position : 'absolute',
-    bottom: 0,
-    width: '100%',
-    textAlign: 'center'
-  })
-  image.forEach(img => {
-    thumbs.append(`<div></div>`)
-  })
-  $("#thumbs > div")
-    .css({
-      width: '40px',
-      height: '40px',
-      borderRadius: '50%',
-      margin: '5px',
-    })
-    .click(function(e){
-      e.stopPropagation();
-      x = $(this).index() - 1
-      change()
-    })
-  let timer = setTimeout(change, 0, 0);
-  function change(dir = 1) {
-    clearTimeout(timer);
-    x += dir
-    $('span').html( x + '/10')
-    if(x < 0) x = n
-    if(x > n) x = 0
-    slide
-      .css({
-        left : `${dir * 100}%`,
-        background: `url("${path}${image[x]}") center/cover` }) 
-      .animate({left: 0}, 500, function(){
-        slider.css({ background: `url("${path}${image[x]}") center/cover` })
-        $(this).css({left: '100%'})
-      })
-    timer = setTimeout(change, 3000);
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let fade = document.getElementsByClassName('fade')
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
   }
-})
-
+  slides[slideIndex-1].style.display = "block";  
+}
 //slider
 
 //bar
