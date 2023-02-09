@@ -12,15 +12,11 @@
     transition:transform 300ms ease;
     transform-origin:50% 50%;
 }
-.image {
-  transform:scale(0.5); 
-}
-
+.image { transform:scale(0.5); }
 .image {
     transform: rotateY(30deg) rotateX(5deg);
     cursor:pointer;
 }
-
 @keyframes flipme {
     0% {
         transform: rotateY(-20deg) rotateX(0deg);
