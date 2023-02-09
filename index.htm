@@ -3,13 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="icon" type="image/x-icon" href="./favicon.ico" /> -->
-        <title>Airsoftaze</title>
         <link rel="stylesheet" href="./assets/style/style.css">
+        <title>Airsoftaze</title>
     </head>
     <body>
         <header>
-            <nav class="bg">
+            <nav class="back">
                 <div class="container nav">
                     <a href="index.htm" id="logo"><img src="./assets/img/logo.png" alt=""></a>
                     <div class="hamburger">
@@ -37,7 +36,15 @@
                         <h1>AIRSOFT CLUB Azərbaycan</h1>
                         <p>The first airsoft club acting from 2015 in Azerbaijan</p>
                     </div>
-                    <div id="bars"></div>
+                    <div id="bars">
+                        <ul class="outer-nav">
+                            <li class="is-active bar"></li>
+                            <li class="bar"></li>
+                            <li class="bar"></li>
+                            <li class="bar"></li>
+                            <li class="bar"></li>
+                          </ul>
+                    </div>
                     <div id="solider">
                         <div class="img">
                             <img id="shadow" src="./assets/img/soliderShadow.png" alt="">
@@ -99,12 +106,12 @@
                 </div>
             </section>
             <section class="section" style="background: url(./assets/img/contactbg.png) center/cover">
-                <div class="bg">
+                <!-- <div class="bg">
                     <div class="container"><h2>Əlaqə</h2></div>
-                </div>
-                <div class="container map">
+                </div> -->
+                <!-- <div class="container map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48617.78909538589!2d49.8026192!3d40.3952952!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40306367fcc61ba1%3A0xb5f5656b28821451!2sairsoftclub.az!5e0!3m2!1sen!2s!4v1674238219584!5m2!1sen!2s" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+                </div> -->
             </section>
         </main>
         <footer class="bg">
@@ -123,8 +130,11 @@
                 </ul>
             </div>
         </footer>
+        <div class="cursor"></div>
+        <a id="button"></a>
         <script src="https://kit.fontawesome.com/edff80f9e7.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
         <script src="./index.js"></script>
+        <script src="./slider.js"></script>
     </body>
 </html>
