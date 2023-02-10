@@ -48,13 +48,13 @@ document.addEventListener('mousemove', function(e){
   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
 });
 
-document.addEventListener('mousedown', function(){
-  cursor.classList.add('click');
-});
+// document.addEventListener('mousedown', function(){
+//   cursor.classList.add('click');
+// });
 
-document.addEventListener('mouseup', function(){
-  cursor.classList.remove('click')
-});
+// document.addEventListener('mouseup', function(){
+//   cursor.classList.remove('click')
+// });
 
 // back to top
 var btn = $('#button');
@@ -88,3 +88,13 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     }
   });
 });
+
+// canvas
+function update(e){
+  var x = e.clientX || e.touches[0].clientX
+  var y = e.clientY || e.touches[0].clientY
+  document.documentElement.style.setProperty('--cursorX', x + 'px')
+  document.documentElement.style.setProperty('--cursorY', y + 'px')
+}
+document.addEventListener('mousemove',update)
+document.addEventListener('touchmove',update)
