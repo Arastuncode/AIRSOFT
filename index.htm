@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/style/effect.css">
         <link rel="stylesheet" href="./assets/style/style.css">
         <title>Airsoftaze</title>
     </head>
-    <body>
+    <body class="page">
         <header>
             <nav class="back">
                 <div class="container nav">
@@ -30,9 +31,9 @@
                     </div>
                 </div>
             </nav>
-            <section class="section">
+            <section >
                 <div class="content">
-                    <div class="text d-flex">
+                    <div class="text d-flex animatable bounceInLeft">
                         <h1>AIRSOFT CLUB Azərbaycan</h1>
                         <p>The first airsoft club acting from 2015 in Azerbaijan</p>
                     </div>
@@ -40,22 +41,22 @@
                     <div id="solider">
                         <div class="img">
                             <img id="shadow" src="./assets/img/soliderShadow.png" alt="">
-                            <img id="main" src="./assets/img/solider.png" alt=""> 
+                            <img id="main" class="animatable fadeIn" src="./assets/img/solider.png" alt=""> 
                         </div>
                     </div>
                 </div>
             </section>
         </header>
         <main>
-            <section>
+            <section class="section">
                 <div class="bg">
                     <div class="container"><h2>Haqqımızda</h2></div>
                 </div>
-                <div class="about">
+                <div class="about  animatable bounceInLeft">
                     <h3>AİRSOFT CLUB AZ</h3>
                     <ul>
                         <li>Klub oyunları həftənin bazar günü saat 11:30-da Ulduz m/s yaxınlığında keçirilir.
-                           Həftəiçi oyuna qatılmaq istədiyiniz təqdirdə isə 6 nəfərdən 10 nəfərə qədər komanda toplayıb oyunda iştirak edə bilərsiniz.</li>
+                        Həftəiçi oyuna qatılmaq istədiyiniz təqdirdə isə 6 nəfərdən 10 nəfərə qədər komanda toplayıb oyunda iştirak edə bilərsiniz.</li>
                         <li>Bir oyunçu üçün qiymət 35 AZN-dir.</li>
                         <li>Ödənişə daxildir</li>
                         <ol id="contains">
@@ -75,7 +76,7 @@
                 <div class="bg">
                     <div class="container"><h2>Galerya</h2></div>
                 </div>
-                <div class="container slider">                    
+                <div class="container slider block animatable bounceInRight none">                    
                     <div class="slideshow-container">
                         <div class="slider-item fade">
                             <img src="./assets/img/1.jpg" >
@@ -107,10 +108,10 @@
             </section>
         </main>
         <footer class="bg">
-            <div class="map">
+            <div class="map animatable bounceInLeft">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48617.78909538589!2d49.8026192!3d40.3952952!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40306367fcc61ba1%3A0xb5f5656b28821451!2sairsoftclub.az!5e0!3m2!1sen!2s!4v1674238219584!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="contact d-flex">
+            <div class="contact d-flex animatable bounceInRight">
                 <ul>
                     <li><a href="tel:+994 055 123 45 67">+994 055 123 45 67</a></li>
                     <li><a href="mailto:example@gmail.com">example@gmail.com</a></li>
@@ -122,15 +123,8 @@
                 </ul>
             </div>
         </footer>
-        <div class="cursor">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-        
         <a id="button"></a>
+        <div class="cursor"></div>
         <script src="https://kit.fontawesome.com/edff80f9e7.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
         <script src="./assets/js/index.js"></script>

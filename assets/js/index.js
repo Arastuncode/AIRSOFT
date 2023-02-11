@@ -43,26 +43,26 @@ document.addEventListener("scroll", () => {
 });
 
 // cursor
-// var cursor = document.querySelector('.cursor');
+var cursor = document.querySelector('.cursor');
 
-// document.addEventListener('mousemove', function(e){
-//   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-// });
+document.addEventListener('mousemove', function(e){
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
 
-$(document).mousemove(function (e) {
-  o = $('.cursor').offset();
-  $(".dot").css({
-    "top": e.pageY - o.top,
-    "left": e.pageX - o.left
-  });
-}); 
-// document.addEventListener('mousedown', function(){
-//   cursor.classList.add('click');
-// });
+// $(document).mousemove(function (e) {
+//   o = $('.cursor').offset();
+//   $(".dot").css({
+//     "top": e.pageY - o.top,
+//     "left": e.pageX - o.left
+//   });
+// }); 
+document.addEventListener('mousedown', function(){
+  cursor.classList.add('click');
+});
 
-// document.addEventListener('mouseup', function(){
-//   cursor.classList.remove('click')
-// });
+document.addEventListener('mouseup', function(){
+  cursor.classList.remove('click')
+});
 
 // back to top
 var btn = $('#button');
@@ -106,3 +106,23 @@ function update(e){
 }
 document.addEventListener('mousemove',update)
 document.addEventListener('touchmove',update)
+
+//
+ 
+jQuery(function($) {
+  var doAnimations = function() {
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+    if ($animatables.length == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+		$animatables.each(function(i) {
+       var $animatable = $(this);
+			if (($animatable.offset().top + $animatable.height() - 10) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+			}
+    });
+	};
+	$(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+});
