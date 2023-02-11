@@ -7,6 +7,7 @@ hamburger.addEventListener('click', function() {
   hamburger.classList.toggle('isactive');
   menu.classList.toggle('active');
 });
+
 //bar
 let ScrollPosition = 0;
 let scroll = false;
@@ -30,7 +31,7 @@ function doSomething(position) {
   })
 }
 
-document.addEventListener("scroll", (event) => {
+document.addEventListener("scroll", () => {
   ScrollPosition = window.scrollY;
   if (!scroll) {
     window.requestAnimationFrame(() => {
@@ -42,12 +43,19 @@ document.addEventListener("scroll", (event) => {
 });
 
 // cursor
-var cursor = document.querySelector('.cursor');
+// var cursor = document.querySelector('.cursor');
 
-document.addEventListener('mousemove', function(e){
-  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-});
+// document.addEventListener('mousemove', function(e){
+//   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+// });
 
+$(document).mousemove(function (e) {
+  o = $('.cursor').offset();
+  $(".dot").css({
+    "top": e.pageY - o.top,
+    "left": e.pageX - o.left
+  });
+}); 
 // document.addEventListener('mousedown', function(){
 //   cursor.classList.add('click');
 // });

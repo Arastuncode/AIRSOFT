@@ -1,4 +1,4 @@
-.image {padding:10px; margin: auto;width: 90%;}
+.image { padding:10px; margin: auto;width: 90%; }
 .image img{
   width: 100%;
   margin: auto;
@@ -13,20 +13,11 @@
   transform-origin:50% 50%;
 }
 .image { transform:scale(0.5); }
-.image {
-  transform: rotateY(30deg) rotateX(5deg);
-  cursor:pointer;
-}
+.image { transform: rotateY(30deg) rotateX(5deg); }
 @keyframes flipme {
-  0% {
-    transform: rotateY(-20deg) rotateX(0deg);
-  }
-  50% {
-    transform: rotateY(0deg) rotateX(10deg);
-  }
-  100% {
-    transform: rotateY(-20deg) rotateX(0deg);
-  }    
+  0% { transform: rotateY(-20deg) rotateX(0deg); }
+  50% { transform: rotateY(0deg) rotateX(10deg); }
+  100% { transform: rotateY(-20deg) rotateX(0deg); }    
 }
 .accordion {
   width: 90%;
@@ -81,7 +72,6 @@
     mask: var(--m);
     transition: .3s linear;
     filter: grayscale(.5);
-    cursor: pointer;
   }
   .img-top:hover {
     -webkit-mask-position: 0 0;
