@@ -8,29 +8,6 @@ hamburger.addEventListener('click', function() {
   menu.classList.toggle('active');
 });
 
-//bar
-let ScrollPosition = 0;
-let scroll = false;
-let kod = ''
-
-for (let i = 0; i < section.length; i++) { kod += `<div class="bar"></div>` }
-bars.innerHTML = kod
-
-function doSomething(position) {  
-  const bar = document.querySelectorAll('.bar')
-  bar.forEach(item1=>{
-    item1.style.height = '40px'
-  })
-  Array.from(section).forEach( function (item,index,arr) {
-    let t = item.offsetTop
-    let h = item.clientHeight
-    let x = (t + h) 
-    if(position <= t && position <= x  ){
-      bar[arr.indexOf(item)].style.height = '70px'
-    }
-  })
-}
-
 document.addEventListener("scroll", () => {
   ScrollPosition = window.scrollY;
   if (!scroll) {
@@ -118,7 +95,7 @@ jQuery(function($) {
     }
 		$animatables.each(function(i) {
        var $animatable = $(this);
-			if (($animatable.offset().top + $animatable.height() - 10) < offset) {
+			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
         $animatable.removeClass('animatable').addClass('animated');
 			}
     });
